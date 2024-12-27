@@ -1,0 +1,18 @@
+:root {
+	--primary-color: #A68A56;
+	--secondary-color: #1d2c36;
+	--background-color: #080808;
+	--text-color: #f8f8f8;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	font-size: 1rem;
+	background-color: var(--background-color);
+}
