@@ -1,7 +1,6 @@
 :root {
-	--primary-color: #A68A56;
-	--secondary-color: #1d2c36;
-	--background-color: #080808;
+	--button-color: #234124;
+	--background-color: #000000;
 	--text-color: #f8f8f8;
 }
 
@@ -9,10 +8,114 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'Bagel Fat One';
+	src: url('./fonts/BagelFatOne-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('./fonts/Quicksand-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('./fonts/Quicksand-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
-	font-size: 1rem;
 	background-color: var(--background-color);
+}
+
+header {
+	height: 100vh;
+	width: 100%;
+	background-image: url(images/header-mountains.avif);
+	background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+h2 {
+	color: var(--text-color);
+	font-family: 'Bagel Fat One';
+	font-size: 3em;
+	text-align: center;
+	margin-top: 1em;
+}
+
+.contact-section h2 {
+	color: #000000;
+}
+
+p {
+	color: var(--text-color);
+	font-family: 'Quicksand';
+	font-weight: normal;
+	padding: 1.125rem;
+	text-align: center;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+}
+
+.waves1 {
+    margin-bottom: -5px;
+}
+
+.waves2 {
+    margin-top: -5px;
+}
+
+
+.contact-section {
+	background-image: url(images/contact-mountains.avif);
+	background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+form {
+    color: #f8f8f8;
+    font-family: 'Quicksand';
+    font-size: 1.125rem;
+	max-width: 400px;
+    margin: 0 auto;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	color: #000000;
+}
+
+.button-send {
+    color: #f8f8f8;
+    background-color: var(--button-color);
+    font-family: 'Quicksand';
+    font-size: 1rem;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+    width: 120px;
+    height: 40px;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-top: 10%;
+}
+
+.button-send:hover {
+    background-color: var(--button-color);
+    cursor: pointer;
 }
