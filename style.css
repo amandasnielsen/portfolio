@@ -11,6 +11,13 @@
 /* #region typograhy */
 
 @font-face {
+	font-family: 'Zefani';
+	src: url('./fonts/Zefani.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Audrey';
 	src: url('./fonts/Audrey-Normal.otf');
 	font-weight: normal;
@@ -47,20 +54,13 @@
 
 /* #endregion typograhy */
 
+/* #region basics */
+
 html, body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
 	background-color: var(--background-color);
-}
-
-header {
-	height: 100vh;
-	width: 100%;
-	background-image: url(images/header-mountains.avif);
-	background-size: cover;
-    background-position: center;
-    position: relative;
 }
 
 h2 {
@@ -70,6 +70,13 @@ h2 {
 	font-size: 4rem;
 	text-align: center;
 	margin-top: 1em;
+}
+
+h3 {
+	color: var(--text-color);
+	z-index: 3;
+	font-family: 'Audrey';
+	font-size: 2rem;
 }
 
 .p-main {
@@ -85,18 +92,103 @@ section {
 	width: 100%;
 }
 
-.skills-icon {
-	width: 120px;
+/* #endregion basics */
+
+/* #region header */
+
+header {
+	height: 100vh;
+	width: 100%;
+	background-image: url(images/header-mountains.avif);
+	background-size: cover;
+    background-position: center;
+    position: relative;
 	display: flex;
-	align-items: center;
-	justify-items: center;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
 }
+
+header::before {
+    content: "";
+    position: absolute;
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.711);
+    z-index: 2;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+	margin-top: 0;
+	font-family: 'Zefani';
+
+    /* Mask effect */
+    background: url(images/header-mountains.avif) center/cover no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 3;
+}
+
+
+/* #endregion header */
+
+/* #region skills */
 
 .skills-icons-section {
 	display: flex;
 	flex-direction: row;
-	gap: 20px;
+	gap: 5em;
+	justify-content: center;
+	margin-top: 10em;
 }
+
+.skills-box {
+	width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.icon {
+	width: 120px;
+}
+
+.icon:hover {
+	box-shadow: 0 0 4px 4px rgba(0,0,0,0.3);
+}
+
+.skills-box:hover {
+	transform: scale(1.2);
+}
+
+.skills-text {
+    display: none;
+    margin-top: 2em;
+    font-size: 0.8rem;
+	font-family: 'Quicksand';
+    color: var(--text-color);
+	width: 150px;
+	text-align: center;
+}
+
+.skills-box:hover .skills-text {
+    display: block;
+}
+
+/* #endregion skills */
+
+/* #region contact */
 
 .contact-section {
 	background-image: url(images/contact-mountains.avif);
@@ -177,6 +269,10 @@ input, textarea {
     cursor: pointer;
 }
 
+/* #endregion contact */
+
+/* #region footer */
+
 footer {
 	height: 12vh;
 	font-family: 'Quicksand';
@@ -207,3 +303,5 @@ footer p {
 	font-size: 0.8rem;
 	color: var(--text-color);
 }
+
+/* #endregion footer */
