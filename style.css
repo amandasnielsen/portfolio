@@ -67,7 +67,7 @@ h2 {
 	color: var(--text-color);
 	font-family: 'Audrey';
 	font-weight: normal;
-	font-size: 4rem;
+	font-size: 2.5rem;
 	text-align: center;
 	margin-top: 1em;
 }
@@ -76,7 +76,7 @@ h3 {
 	color: var(--text-color);
 	z-index: 3;
 	font-family: 'Audrey';
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .p-main {
@@ -88,7 +88,6 @@ h3 {
 }
 
 section {
-	height: 100vh;
 	width: 100%;
 }
 
@@ -121,7 +120,7 @@ header::before {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 5rem;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -140,20 +139,66 @@ h1 {
 
 /* #endregion header */
 
+/* #region about-me */
+
+.about-me-section {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 80vh;
+}
+
+.about-me-section p {
+	max-width: 500px;
+	padding: 2em;
+	font-size: 0.9rem;
+}
+
+.about-right {
+	order: 1;
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+.about-left {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	order: 2;
+}
+
+.about-me-section img {
+	height: 180px;
+	width: 110px;
+}
+
+/* #endregion about-me */
+
 /* #region skills */
+
+.skills-section {
+	height: 80vh;
+}
+
+.skills-section p {
+	max-width: 500px;
+	padding: 2em;
+	font-size: 0.9rem;
+}
 
 .skills-icons-section {
 	display: flex;
-	flex-direction: row;
-	gap: 5em;
+	flex-direction: column;
+	gap: 2em;
 	justify-content: center;
-	margin-top: 10em;
+	margin-top: 3em;
 }
 
 .skills-box {
-	width: 120px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease-in-out;
@@ -161,7 +206,7 @@ h1 {
 }
 
 .icon {
-	width: 120px;
+	width: 90px;
 }
 
 .icon:hover {
@@ -174,7 +219,6 @@ h1 {
 
 .skills-text {
     display: none;
-    margin-top: 2em;
     font-size: 0.8rem;
 	font-family: 'Quicksand';
     color: var(--text-color);
@@ -188,6 +232,21 @@ h1 {
 
 /* #endregion skills */
 
+/* #region projects */
+
+.projects-section {
+	height: 90vh;
+	margin-top: 4em;
+}
+
+.projects-section p {
+	max-width: 500px;
+	padding: 2em;
+	font-size: 0.9rem;
+}
+
+/* #endregion projects */
+
 /* #region contact */
 
 .contact-section {
@@ -196,6 +255,7 @@ h1 {
     background-position: center;
     position: relative;
     padding-top: 1em;
+	height: 90vh;
 }
 
 form {
@@ -274,10 +334,14 @@ input, textarea {
 /* #region footer */
 
 footer {
-	height: 12vh;
+	height: 8em;
 	font-family: 'Quicksand';
 	display: flex;
 	justify-content: space-evenly;
+	margin-top: -8em;
+    position: relative;
+    z-index: 10;
+	background-color: rgba(2, 2, 2, 0.8);
 }
 
 .social-media {
@@ -285,7 +349,7 @@ footer {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
+	gap: 1em;
 }
 
 .media-logo {
@@ -295,13 +359,21 @@ footer {
 
 footer h4 {
 	font-weight: bold;
-	color: var(--text-color);
+	color: #f8f8f8;
 }
 
 footer p {
 	margin: 0;
 	font-size: 0.8rem;
-	color: var(--text-color);
+	color: #f8f8f8;
 }
 
 /* #endregion footer */
+
+/* #region media-queries */
+
+/* @media screen and (max-width: 1500px) { */
+
+
+
+/* #endregion media-queries */
