@@ -69,7 +69,7 @@ h2 {
 	font-weight: normal;
 	font-size: 2.5rem;
 	text-align: center;
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 h3 {
@@ -145,7 +145,8 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	height: 80vh;
+	height: auto;
+	margin-bottom: 6em;
 }
 
 .about-me-section p {
@@ -156,8 +157,11 @@ h1 {
 
 .about-right {
 	order: 1;
-	margin-top: 2em;
+	/* margin-top: 2em; */
 	margin-bottom: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .about-left {
@@ -179,7 +183,10 @@ h1 {
 /* #region skills */
 
 .skills-section {
-	height: 80vh;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .skills-section p {
@@ -219,7 +226,7 @@ h1 {
 
 .skills-text {
     display: none;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 	font-family: 'Quicksand';
     color: var(--text-color);
 	width: 150px;
@@ -235,8 +242,10 @@ h1 {
 /* #region projects */
 
 .projects-section {
-	height: 90vh;
-	margin-top: 4em;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .projects-section p {
@@ -255,7 +264,7 @@ h1 {
     background-position: center;
     position: relative;
     padding-top: 1em;
-	height: 90vh;
+	height: auto;
 }
 
 form {
@@ -266,7 +275,7 @@ form {
     margin: 0 auto;
 	border-radius: 8px;
 	color: #000000;
-	padding-top: 3em;
+	padding-top: 1em;
 }
 
 .form-group {
@@ -279,10 +288,14 @@ input, textarea {
 	border: 1px solid rgb(181, 181, 181);
 	outline: none;
 	border-radius: 0.4em;
+	padding: 0 0 0 4px;
+}
+
+textarea {
+	padding-top: 6px;
 }
 
 .text1, .text2 {
-    width: 300px;
     font-size: 1rem;
     font-family: 'Quicksand';  
 	margin-bottom: 1em;
@@ -316,7 +329,8 @@ input, textarea {
     margin: 8px 0;
     box-sizing: border-box;
     flex-shrink: 0;
-    margin-top: 10%;
+    margin-top: 1em;
+	margin-bottom: 12em;
 }
 
 .button-container {
@@ -334,11 +348,11 @@ input, textarea {
 /* #region footer */
 
 footer {
-	height: 8em;
+	height: 9em;
 	font-family: 'Quicksand';
 	display: flex;
 	justify-content: space-evenly;
-	margin-top: -8em;
+	margin-top: -9em;
     position: relative;
     z-index: 10;
 	background-color: rgba(2, 2, 2, 0.8);
@@ -346,7 +360,7 @@ footer {
 
 .social-media {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 1em;
@@ -372,8 +386,53 @@ footer p {
 
 /* #region media-queries */
 
-/* @media screen and (max-width: 1500px) { */
+@media screen and (min-width: 1000px) {
 
+	h1 {
+		font-size: 8rem;
+	}
 
+	h3 {
+		font-size: 2.5rem;
+	}
+
+	.about-me-section {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.about-left {
+		order: 1;
+	}
+
+	.skills-icons-section {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 4em;
+		gap: 4em;
+	}
+
+	.skills-box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.skills-text {
+		margin-top: 2em;
+	}
+
+	.icon {
+		width: 120px;
+	}
+
+	.skills-section p {
+		max-width: 800px;
+	}
+
+	.projects-section p {
+		max-width: 800px;
+	}
+
+}
 
 /* #endregion media-queries */
