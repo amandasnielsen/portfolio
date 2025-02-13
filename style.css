@@ -1,6 +1,7 @@
 :root {
 	--button-color: #234124;
 	--background-color: #f8f8f8;
+	--background-color-1: #dedddc;
 	--text-color: #080808;
 }
 
@@ -52,6 +53,20 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Lora';
+	src: url('./fonts/Lora-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lora';
+	src: url('./fonts/Lora-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
 /* #endregion typograhy */
 
 /* #region basics */
@@ -60,7 +75,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
-	background-color: var(--background-color);
+	background-color: var(--background-color-1);
 }
 
 h2 {
@@ -81,7 +96,7 @@ h3 {
 
 .p-main {
 	color: var(--text-color);
-	font-family: 'Quicksand';
+	font-family: 'Lora';
 	font-weight: normal;
 	font-size: 0.8rem;
 	padding: 1.125rem;
@@ -226,7 +241,7 @@ h1 {
 .skills-text {
     display: none;
     font-size: 0.7rem;
-	font-family: 'Quicksand';
+	font-family: 'Lora';
     color: var(--text-color);
 	width: 150px;
 	text-align: center;
@@ -279,7 +294,7 @@ h1 {
 }
 
 .show-more {
-	font-family: 'Quicksand';
+	font-family: 'Lora';
 	font-size: 0.8rem;
 	font-weight: bold;
 }
@@ -304,7 +319,7 @@ h1 {
 
 form {
     color: #f8f8f8;
-    font-family: 'Quicksand';
+    font-family: 'Lora';
     font-size: 0.8rem;
 	max-width: 300px;
     margin: 0 auto;
@@ -332,7 +347,7 @@ textarea {
 
 .text1, .text2 {
     font-size: 0.8rem;
-    font-family: 'Quicksand';  
+    font-family: 'Lora';  
 	margin-bottom: 1em;
 }
 
@@ -353,7 +368,7 @@ textarea {
 .button-send {
     color: #f8f8f8;
     background-color: var(--button-color);
-    font-family: 'Quicksand';
+    font-family: 'Lora';
     font-size: 0.8rem;
     border: none;
     border-radius: 2em;
@@ -385,7 +400,7 @@ textarea {
 
 footer {
 	height: 9em;
-	font-family: 'Quicksand';
+	font-family: 'Lora';
 	display: flex;
 	justify-content: space-evenly;
 	margin-top: -9em;
@@ -486,6 +501,11 @@ footer p {
 	.projects-2 {
 		width: 160px;
 		height: 120px;
+	}
+
+	.social-media {
+		display: flex;
+		flex-direction: row;
 	}
 
 }
