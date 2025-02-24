@@ -76,6 +76,7 @@ html, body {
 	padding: 0;
 	min-height: 100vh;
 	background-color: var(--background-color-1);
+	overflow: hidden;
 }
 
 h2 {
@@ -84,19 +85,19 @@ h2 {
 	font-weight: normal;
 	font-size: 2.5rem;
 	text-align: center;
-	margin-top: 2em;
 }
 
 h3 {
 	color: var(--text-color);
 	z-index: 3;
 	font-family: 'Audrey';
-	font-size: 1.5rem;
+	font-size: 2rem;
+	font-weight: normal;
 }
 
 .p-main {
 	color: var(--text-color);
-	font-family: 'Lora';
+	font-family: 'Quicksand';
 	font-weight: normal;
 	font-size: 0.8rem;
 	padding: 1.125rem;
@@ -109,7 +110,64 @@ section {
 
 /* #endregion basics */
 
-/* #region header */
+/* #region aside */
+
+main {
+	display: flex;
+	flex-direction: row;
+}
+
+aside {
+	height: 100vh;
+	margin-left: 6em;
+	margin-top: 12em;
+}
+
+h4 {
+	font-family: 'Zefani';
+	font-size: 2rem;
+	border-bottom: 2px solid black;
+    padding-bottom: 1.5em; /* Mellanrum mellan texten och strecket */
+}
+
+.aside-links {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	margin-top: 6em;
+}
+
+a {
+	font-family: 'Quicksand';
+	color: var(--text-color);
+	text-decoration: none;
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+	transform: scale(1.3);
+}
+
+.social-media {
+	display: flex;
+	flex-direction: row;
+	margin-top: 6em;
+	gap: 1em;
+}
+
+.media-logo {
+	width: 30px;
+}
+
+aside p {
+	font-family: 'Quicksand';
+	margin-top: 2em;
+	font-size: 0.8rem;
+}
+
+/* #endregion aside */
+
+/* #region page-index */
 
 header {
 	height: 100vh;
@@ -131,12 +189,12 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.711);
+    background: rgba(255, 255, 255, 0.493);
     z-index: 2;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 8rem;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -152,174 +210,47 @@ h1 {
     z-index: 3;
 }
 
-
-/* #endregion header */
-
-/* #region about-me */
-
-.about-me-section {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	height: auto;
-	margin-bottom: 3em;
-}
-
-.about-me-section p {
-	max-width: 500px;
-	padding: 2em;
-}
-
-.about-right {
-	order: 1;
-	margin-bottom: 4em;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.about-left {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 1em;
-	order: 2;
-}
-
-.about-me-section img {
-	height: 180px;
-	width: 110px;
-}
-
-/* #endregion about-me */
-
-/* #region skills */
-
-.skills-section {
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.skills-section p {
-	max-width: 500px;
-	padding: 2em;
-}
-
-.skills-icons-section {
-	display: flex;
-	flex-direction: column;
-	gap: 2em;
-	justify-content: center;
-	margin-top: 3em;
-	margin-bottom: 2em;
-}
-
-.skills-box {
+.page-links {
+    z-index: 3;
+    margin-top: 12em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease-in-out;
-    position: relative;
+    gap: 8em;
 }
 
-.icon {
-	width: 90px;
-}
-
-.icon:hover {
-	box-shadow: 0 0 4px 4px rgba(0,0,0,0.3);
-}
-
-.skills-box:hover {
-	transform: scale(1.2);
-}
-
-.skills-text {
-    display: none;
-    font-size: 0.7rem;
-	font-family: 'Lora';
+.page-links a {
+    font-family: 'Audrey';
+	font-weight: normal;
     color: var(--text-color);
-	width: 150px;
-	text-align: center;
+    font-size: 3rem;
+    text-decoration: none;
+	transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.skills-box:hover .skills-text {
-    display: block;
+.page-links a:hover {
+	transform: scale(1.3);
+    /* color: #2b5a33;  */
 }
 
-/* #endregion skills */
+/* #endregion page-index */
 
-/* #region projects */
-
-.projects-section {
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.projects-section p {
-	max-width: 500px;
-	padding: 2em;
-}
-
-.projects-row-1 {
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 1em;
-	gap: 1em;
-}
-
-.projects-1 {
-	width: 100px;
-	height: 80px;
-	background-color: black;
-}
-
-.projects-row-2 {
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 1em;
-	gap: 1em;
-}
-
-.projects-2 {
-	width: 100px;
-	height: 80px;
-	background-color: black;
-}
-
-.show-more {
-	font-family: 'Lora';
-	font-size: 0.8rem;
-	font-weight: bold;
-}
-
-.show-more:hover {
-	cursor: pointer;
-	transform: scale(1.1);
-}
-
-/* #endregion projects */
-
-/* #region contact */
+/* #region page-contact */
 
 .contact-section {
-	background-image: url(images/contact-mountains.avif);
+	/* background-image: url(images/contact-mountains.avif);
 	background-size: cover;
     background-position: center;
     position: relative;
-    padding-top: 1em;
-	height: auto;
+    padding-top: 1em; */
+	/* height: 100vh; */
+	margin-top: 13em;
 }
 
 form {
     color: #f8f8f8;
-    font-family: 'Lora';
+    font-family: 'Quicksand';
     font-size: 0.8rem;
 	max-width: 300px;
     margin: 0 auto;
@@ -347,7 +278,7 @@ textarea {
 
 .text1, .text2 {
     font-size: 0.8rem;
-    font-family: 'Lora';  
+    font-family: 'Quicksand';  
 	margin-bottom: 1em;
 }
 
@@ -368,24 +299,22 @@ textarea {
 .button-send {
     color: #f8f8f8;
     background-color: var(--button-color);
-    font-family: 'Lora';
-    font-size: 0.8rem;
+    font-family: 'Quicksand';
+    font-size: 0.7rem;
     border: none;
     border-radius: 2em;
     box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
-    width: 120px;
-    height: 40px;
+    width: 100px;
+    height: 30px;
     padding: 8px;
-    margin: 8px 0;
     box-sizing: border-box;
     flex-shrink: 0;
     margin-top: 1em;
-	margin-bottom: 14em;
 }
 
 .button-container {
 	display: flex;
-	justify-content: center;
+	justify-content: right;
 }
 
 .button-send:hover {
@@ -394,120 +323,4 @@ textarea {
     cursor: pointer;
 }
 
-/* #endregion contact */
-
-/* #region footer */
-
-footer {
-	height: 9em;
-	font-family: 'Lora';
-	display: flex;
-	justify-content: space-evenly;
-	margin-top: -9em;
-    position: relative;
-    z-index: 10;
-	background-color: rgba(2, 2, 2, 0.6);
-}
-
-.social-media {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 1em;
-}
-
-.media-logo {
-	width: 20px;
-	color: var(--text-color);
-}
-
-footer h4 {
-	font-weight: bold;
-	color: #f8f8f8;
-}
-
-footer p {
-	margin: 0;
-	font-size: 0.8rem;
-	color: #f8f8f8;
-}
-
-/* #endregion footer */
-
-/* #region media-queries */
-
-@media screen and (min-width: 1000px) {
-
-	h1 {
-		font-size: 8rem;
-	}
-
-	h3 {
-		font-size: 2.5rem;
-	}
-
-	.about-me-section {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.about-left {
-		order: 1;
-	}
-
-	.skills-icons-section {
-		display: flex;
-		flex-direction: row;
-		margin-bottom: 4em;
-		gap: 4em;
-	}
-
-	.skills-box {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.skills-text {
-		margin-top: 2em;
-	}
-
-	.icon {
-		width: 120px;
-	}
-
-	.skills-section p {
-		max-width: 800px;
-	}
-
-	.projects-section p {
-		max-width: 800px;
-	}
-
-	.projects-row-1 {
-		gap: 3em;
-		margin-bottom: 3em;
-	}
-
-	.projects-1 {
-		width: 160px;
-		height: 120px;
-	}
-
-	.projects-row-2 {
-		gap: 3em;
-	}
-
-	.projects-2 {
-		width: 160px;
-		height: 120px;
-	}
-
-	.social-media {
-		display: flex;
-		flex-direction: row;
-	}
-
-}
-
-/* #endregion media-queries */
+/* #endregion page-contact */
