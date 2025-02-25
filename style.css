@@ -79,6 +79,24 @@ html, body {
 	overflow: hidden;
 }
 
+.content-wrapper {
+    width: 80vw; /* 80% av viewportens bredd */
+    max-width: 1200px; /* Begränsa maxbredden */
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.045);
+    background: var(--background-color-1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+
 h2 {
 	color: var(--text-color);
 	font-family: 'Audrey';
@@ -104,10 +122,6 @@ h3 {
 	text-align: center;
 }
 
-section {
-	width: 100%;
-}
-
 /* #endregion basics */
 
 /* #region aside */
@@ -118,16 +132,16 @@ main {
 }
 
 aside {
+	margin-top: 3em;
+	margin-left: 3em;
 	height: 100vh;
-	margin-left: 6em;
-	margin-top: 12em;
 }
 
 h4 {
 	font-family: 'Zefani';
 	font-size: 2rem;
 	border-bottom: 2px solid black;
-    padding-bottom: 1.5em; /* Mellanrum mellan texten och strecket */
+    padding-bottom: 1.5em;
 }
 
 .aside-links {
@@ -239,20 +253,20 @@ h1 {
 /* #region page-contact */
 
 .contact-section {
-	/* background-image: url(images/contact-mountains.avif);
-	background-size: cover;
-    background-position: center;
-    position: relative;
-    padding-top: 1em; */
-	/* height: 100vh; */
-	margin-top: 13em;
+	height: 70vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 3em;
 }
 
 form {
     color: #f8f8f8;
     font-family: 'Quicksand';
     font-size: 0.8rem;
-	max-width: 300px;
+	/* max-width: 300px; */
     margin: 0 auto;
 	border-radius: 8px;
 	color: #000000;
@@ -262,7 +276,7 @@ form {
 .form-group {
 	display: flex;
 	flex-direction: column;
-	max-width: 300px;
+	/* max-width: 300px; */
 }
 
 input, textarea {
@@ -324,3 +338,48 @@ textarea {
 }
 
 /* #endregion page-contact */
+
+/* #region page-about */
+
+.about-me {
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3em;
+}
+
+/* #endregion page-about */
+
+/* #region page-projects */
+
+.projects-section {
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 3em;
+}
+
+.projects-box {
+	width: 120px;
+	height: 80px;
+	background-color: #000000;
+}
+
+.projects-row-1 {
+	display: flex;
+	flex-direction: row;
+	gap: 2em;
+	margin-top: 2em;
+}
+
+.projects-row-2 {
+	display: flex;
+	flex-direction: row;
+	gap: 2em;
+	margin-top: 2em;
+}
+
+/* #endregion page-projects */
