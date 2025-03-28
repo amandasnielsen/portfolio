@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* #region roots */
+
+:root {
+	--primary-color: #a76b12;
+	--text-color: #f8f8f8;
+}
+
+@font-face {
+	font-family: 'EB-Garamond';
+	src: url('../fonts/EBGaramond-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../fonts/Quicksand-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* #endregion roots */
+
+/* #region header */
+
+header {
+    background-image: url(../images/header-image.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #3333335d; */
+    color: var(--text-color);
+    z-index: 1000;
+    top: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+}
+
+.navbar__name {
+    font-size: 1.5rem;
+    font-family: 'Quicksand';
+}
+
+.navbar__links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 6rem;
+}
+
+.navbar__links a {
+    cursor: pointer;
+    font-family: 'EB-Garamond';
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar__links a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 8rem;
+    text-align: center;
+    color: var(--text-color);
+    font-family: 'Quicksand';
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.h1__underline {
+    position: relative;
+    display: inline-block;
+}
+
+.h1__underline::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 110%;
+    height: 0.6rem;
+    background: var(--primary-color);
+    transform: skewX(150deg) rotate(-10deg);
+    border-radius: 50% / -30%;
+    z-index: -1;
+}
+
+.button__contact {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    position: absolute;
+    bottom: 10rem;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Quicksand';
+}
+
+.button__contact:hover {
+    background-color: #68420a;
+    transform: scale(1.1);
+}
+
+.button__contact:active {
+    background-color: var(--primary-color);
+    transform: scale(1);
+}
+
+/* #endregion header */
